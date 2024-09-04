@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { CryptoTicker, OptionsProps } from "../interfaces/options";
-import { intialValueOptions } from "./seed";
+import { intialValueOptions } from "../interfaces/data";
 import { DataResults } from "../interfaces/data";
 import { config } from "../../config";
 

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { stockIntervals } from "../../config";
 import { setFilters } from "../redux/slice";
-import { FiltersOptions } from "../redux/seed";
+import { FiltersOptions } from "../interfaces/options";
 
 const Intervals = () => {
   const dispatch = useDispatch();

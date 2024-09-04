@@ -1,5 +1,4 @@
-import { InitialValuesProps } from "../redux/seed";
-
+import { DataResults } from "../interfaces/data";
 export interface OptionsProps {
   label: string;
   multiplier: number;
@@ -17,4 +16,20 @@ export type CryptoTicker =
 
 export interface StateProps {
   crypto: InitialValuesProps;
+}
+
+export interface FiltersOptions {
+  currencyName: string;
+  currencyKey: string;
+  multiplier: number;
+  timeSpan: string;
+  from: number;
+  to: number;
+}
+
+export interface InitialValuesProps {
+  filters: FiltersOptions;
+  loading: boolean;
+  error?: string;
+  data: DataResults[] | [];
 }

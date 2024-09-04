@@ -9,14 +9,14 @@ function App() {
   const dispatch = useDispatch();
   const crypto = useSelector((state: StateProps) => state.crypto);
 
+  const initObj = {
+    cryptoTicker: crypto.filters.currencyKey,
+    interval: crypto.filters,
+  };
+
   useEffect(() => {
-    // @ts-expect-error Values sad
-    dispatch(
-      fetchCrypto({
-        cryptoTicker: crypto.filters.currencyKey,
-        interval: crypto.filters,
-      })
-    );
+    // @ts-expect-error Typo error with dispatch types
+    dispatch(fetchCrypto(initObj));
   }, [crypto.filters.currencyKey, crypto.filters.from]);
 
   return <StockChart />;
