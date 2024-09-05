@@ -20,7 +20,7 @@ const StockChart = () => {
 
   const dataFormat = (data: DataResults[]) =>
     data.map((el) => ({
-      date: formatDate(el.t) + "",
+      date: formatDate(el.t, crypto.filters.timeSpan) + "",
       price: el.c,
     }));
 

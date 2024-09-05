@@ -20,7 +20,7 @@ const Intervals = () => {
           onClick={() => handleActive(el, index)}
           key={index}
           className={`px-5 border-l-2 cursor-pointer hover:bg-black hover:text-white ${
-            active == index ? "border-b-2" : ""
+            active == index ? "bg-black text-white" : ""
           }`}
         >
           {el.label}

@@ -8,6 +8,7 @@ export const formatPrice = (price: number) => {
   }).format(price);
 };
 
-export const formatDate = (date: number) => {
-  return format(date, "p");
+export const formatDate = (date: number, timeSpan: string) => {
+  const formatString = timeSpan !== "hour" ? "PP" : "p";
+  return format(date, formatString);
 };

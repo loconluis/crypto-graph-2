@@ -33,3 +33,8 @@ export interface InitialValuesProps {
   error?: string;
   data: DataResults[] | [];
 }
+
+export interface OptionsThunksProps {
+  cryptoTicker: CryptoTicker | string;
+  interval: Partial<OptionsProps>;
+}
