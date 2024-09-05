@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import cryptoReducer from "./slice";
+import cryptoReducer from "./cryptoSlice";
+import darkReducer from "./darkSlice";
 
 export const store = configureStore({
-  reducer: { crypto: cryptoReducer },
+  reducer: { crypto: cryptoReducer, dark: darkReducer },
 });

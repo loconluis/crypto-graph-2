@@ -16,6 +16,9 @@ export type CryptoTicker =
 
 export interface StateProps {
   crypto: InitialValuesProps;
+  dark: {
+    active: boolean;
+  };
 }
 
 export interface FiltersOptions {

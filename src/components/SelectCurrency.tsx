@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { setFilters } from "../redux/slice";
+import { setFilters } from "../redux/cryptoSlice";
 import { StateProps } from "../interfaces/options";
 
 const SelectCurrency = () => {

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { stockIntervals } from "../../config";
-import { setFilters } from "../redux/slice";
+import { setFilters } from "../redux/cryptoSlice";
 import { FiltersOptions } from "../interfaces/options";
 
 const Intervals = () => {
@@ -19,8 +19,10 @@ const Intervals = () => {
         <div
           onClick={() => handleActive(el, index)}
           key={index}
-          className={`px-5 border-l-2 cursor-pointer hover:bg-black hover:text-white ${
-            active == index ? "bg-black text-white" : ""
+          className={`px-5 border-l-2 cursor-pointer hover:bg-black hover:text-white dark:text-white dark:hover:bg-gray-100 dark:hover:text-black ${
+            active == index
+              ? "bg-black text-white dark:bg-white dark:text-black"
+              : ""
           }`}
         >
           {el.label}
